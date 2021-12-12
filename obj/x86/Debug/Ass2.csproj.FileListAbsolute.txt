@@ -1,0 +1,2 @@
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\Ass2.csproj.AssemblyReference.cache
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\Ass2.csproj.CoreCompileInputs.cache

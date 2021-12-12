@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace KIT206_RAP_Project
 {
   
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             ResearcherController R_Cont=new ResearcherController();
             PublicationsController P_Cont=new PublicationsController();
