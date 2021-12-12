@@ -1,2 +1,9 @@
 C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\Ass2.csproj.AssemblyReference.cache
 C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\Ass2.csproj.CoreCompileInputs.cache
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\bin\Debug\ConsoleApplication.exe
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\bin\Debug\ConsoleApplication.pdb
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\bin\Debug\MySql.Data.dll
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\bin\Debug\MySql.Data.xml
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\Ass2.csproj.CopyComplete
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\jnmeares\source\repos\KIT206_RAP_project\obj\x86\Debug\ConsoleApplication.pdb

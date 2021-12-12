@@ -4,8 +4,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data;
+
 using MySql.Data.MySqlClient;
+using KIT206_RAP_Project.Research;
+using KIT206_RAP_Project.Control;
+using KIT206_RAP_Project.Database;
 
 namespace KIT206_RAP_Project.Database
 {
@@ -34,7 +37,7 @@ namespace KIT206_RAP_Project.Database
 
                 while (rdr.Read())
                 {
-                    ResearcherList.Add(new Researcher { Name = rdr.GetString(1) + ' ' + rdr.GetString(2), Id = rdr.GetInt32(0) });
+                    ResearcherList.Add(new Researcher { GivenName = rdr.GetString(1), FamilyName=rdr.GetString(2), Id = rdr.GetInt32(0) });
                 }
             }
             finally
@@ -49,7 +52,14 @@ namespace KIT206_RAP_Project.Database
                 }
             }
 
-            return TestList;
+            foreach (Researcher r1 in ResearcherList)
+            {
+                Console.WriteLine(r1);
+                string PauseNow = Console.ReadLine();
+                
+            }
+
+            return ResearcherList;
 
         }
 
@@ -63,45 +73,7 @@ namespace KIT206_RAP_Project.Database
             return null;
         }
 
-        public List<Research.Publication> fetchBasicPublicationDetails(Research.Researcher r)
-        {
-            conn = GetConnection();
-            List<Publication> PubList = new List<Publication>();
-            MySqlDataReader rdr = null;
-
-            try
-            {
-                conn.Open();
-
-                MySqlCommand cmd = new MySqlCommand("select title, year, type, available " +
-                 "from publication as pub, researcher_publication as respub " +
-                 "where pub.doi = respub.doi and researcher_id=?id", conn);
-                cmd.Parameters.AddWithValue("id", Id);
-
-                rdr = cmd.ExecuteReader();
-
-                while (rdr.Read())
-                {
-                    PubList.Add(new Publication
-                        { Title = rdr.GetString(0), Year = rdr.GetInt32(1), Mode = Publication.ParseEnum<Publication.OutputType>(rdr.GetString(2)), Certified = rdr.GetDateTime(3)});
-                }
-            }
-            finally
-            {
-                if (rdr != null)
-                {
-                    rdr.Close();
-                }
-                if (conn != null)
-                {
-                    conn.Close();
-                }
-            }
-
-            return TestPubList;
-
-            return null;
-        }
+        
 
         public Research.Publication completeResearcherDetails(Research.Publication p)
         {
