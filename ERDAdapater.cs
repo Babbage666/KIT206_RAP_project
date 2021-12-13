@@ -75,12 +75,17 @@ namespace KIT206_RAP_Project.Database
 
         
 
-        public Research.Publication completePublicationDetails(Research.Publication p)
+        public List<Research.Publication> fetchBasicPublicationDetails(Research.Researcher r)
+        {
+            return null;
+        }
+        
+        public List<Research.Publication> completePublicationDetails(Publication p)
         {
             return null;
         }
 
-        public List<int> PublicationDetails(DateTime from, DateTime to)
+        public Publication fetchPublicationCounts(DateTime from, DateTime to)
         {
             return null;
         }
